@@ -1,19 +1,10 @@
 import { faker } from "@faker-js/faker";
-
-export class Company {
-    companyName: string;
+import { User } from "./User.ts";
+export class Company extends User {
     catchPhrase: string;
-    location: {
-        lat: number;
-        long: number;
-    }
-
-    constructor(){
-        this.companyName= faker.company.name();
-        this.catchPhrase= faker.company.catchPhrase();
-        this.location = {
-            lat: faker.location.latitude(),
-            long: faker.location.longitude()
-        }
+    constructor() {
+        super();
+        this.name= faker.company.name();
+        this.catchPhrase = faker.company.catchPhrase();
     }
 }

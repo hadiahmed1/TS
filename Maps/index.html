@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS|Maps</title>
+    <style>
+        /* Give the map a size */
+        #map {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
 </head>
 <body>
     <h1>TS | MAP</h1>
-
-    <script type="module" src="./src/index.ts"></script>
+    <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXwRNFksnxRXxiGVTLeQGaWOyJ7qJzH8M&callback=Function.prototype"></script>
+    <script type="module" src="./src/index.ts"></script>
 </body>
 </html>
