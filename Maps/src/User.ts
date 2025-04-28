@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
+import { Place } from './CustomMap.ts';
 
-export class User {
+export class User implements Place {
     name: string;
     location: {
         lat: number;
