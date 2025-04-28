@@ -3,7 +3,6 @@ import {User} from "./User.ts";
 import {Company} from "./Company.ts"
 
 export interface Place {
-    name: string
     location:{
         lat: number,
         lng: number
@@ -21,12 +20,5 @@ export class CustomMap {
             map: this.googleMap,
             position: user.location
         });
-        const infoWindow =new  google.maps.InfoWindow({
-            content: user?.name
-        });
-
-        marker.addListener('click', ()=>{
-            infoWindow.open(this.googleMap, marker);
-        })
     }
 }
